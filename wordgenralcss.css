@@ -1,0 +1,25 @@
+.header{
+  margin-bottom: 50px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0;
+}
+
+.generateWord{
+  background-color: rgb(128, 160, 79);
+  width: 150px; /* Set your desired width */
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.generateWord:hover{
+  background-color: yellow;
+  }

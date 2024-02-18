@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Word Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #word {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    #meaning {
+      font-style: italic;
+      color: #888;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <a href="index.html" style="position: fixed; top: 5px; right: 5px; text-decoration: none; color: black; font-weight: bold;">Go Back to Home</a>
+
+  <h1>Random Word Generator</h1>
+
+  <p>Click the button to generate a random word with its meaning:</p>
+  <button onclick="generateWord()">Generate</button>
+
+  <br><br><br>
+
+  <span id="word"></span>
+  <br>
+  <span id="meaning"></span>
+
+  <script>
+    // Replace this with your own word and meaning data (array of objects)
+    const words = [
+      { word: "serendipity", meaning: "the occurrence and development of events by chance in a happy or beneficial way" },
+      { word: "effervescent", meaning: "lively and cheerful" },
+      { word: "petrichor", meaning: "the pleasant smell after rain" },
+      { word: "sonder", meaning: "the realization that each passerby is living a life as vivid and complex as your own" },
+      { word: "pulchritudinous", meaning: "exceedingly beautiful" },
+    ];
+
+    function generateWord() {
+      const randomIndex = Math.floor(Math.random() * words.length);
+      const word = words[randomIndex].word;
+      const meaning = words[randomIndex].meaning;
+      document.getElementById("word").textContent = word;
+      document.getElementById("meaning").textContent = meaning;
+    }
+  </script>
+</body>
+</html>
